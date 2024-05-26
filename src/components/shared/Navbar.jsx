@@ -1,6 +1,11 @@
+import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase/firebase.config";
 
 export default function Navbar() {
+    const [user] = useAuthState(auth);
+
+    const [signOut] = useSignOut(auth);
     return (
         <div className="">
 
@@ -16,7 +21,16 @@ export default function Navbar() {
                             <Link to={"/"}><li><a>About</a></li></Link>
                             <Link to={"menus"}><li><a>Menus</a></li></Link>
                             <Link to={"contact"}><li><a>Contact</a></li></Link>
-                            <Link to={"/dashboard"}><li><a>Dashboard</a></li></Link>
+
+
+                            {!user?.email ?
+                                <>
+
+                                </> :
+                                <>
+                                    <Link to={"/dashboard"}><li><a>Dashboard</a></li></Link>
+                                </>
+                            }
 
                         </ul>
                     </div>
@@ -28,29 +42,61 @@ export default function Navbar() {
                         <Link to={"about"}><li><a>About</a></li></Link>
                         <Link to={"menus"}><li><a>Menus</a></li></Link>
                         <Link to={"contact"}><li><a>Contact</a></li></Link>
-                        <Link to={"/dashboard"}><li><a>Dashboard</a></li></Link>
+                        {!user?.email ?
+                            <>
+
+                            </> :
+                            <>
+                                <Link to={"/dashboard"}><li><a>Dashboard</a></li></Link>
+                            </>
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                    {!user?.email ?
+                        <>
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="">
+                                        <li>
+                                            <a className="justify-between">
+                                                Profile
+
+                                            </a>
+                                        </li>
+                                    </div>
+                                </div>
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-color rounded-box w-52">
+                                    <Link to={"login"}><li><a>Login</a></li></Link>
+                                    <Link to={"register"}><li><a>Register</a></li></Link>
+
+                                </ul>
                             </div>
-                        </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-color rounded-box w-52">
-                            <li>
-                                <a className="justify-between">
-                                    Profile
-                                    <span className="badge">New</span>
-                                </a>
-                            </li>
 
-                            <Link to={"login"}><li><a>Login</a></li></Link>
-                            <Link to={"register"}><li><a>Register</a></li></Link>
+                        </> :
+                        <>
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                                    </div>
+                                </div>
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-color rounded-box w-52">
+                                    <li>
+                                        <a className="justify-between">
+                                            {user?.displayName}
+                                            {/* <span className="badge">New</span> */}
+                                        </a>
+                                    </li>
+                                    <Link onClick={async () => {
+                                        const success = await signOut();
+                                    }} to={"/"}><li><a>Logout</a></li></Link>
 
-                        </ul>
-                    </div>
+                                </ul>
+                            </div>
+                        </>
+                    }
+
                 </div>
             </div>
 
