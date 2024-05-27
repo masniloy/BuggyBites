@@ -6,9 +6,12 @@ import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../layouts/Dashboard";
-import DashboardHome from "../pages/DashboardHome";
 import Menus from "../pages/Menus";
 import PrivateRoutes from "./PrivateRoutes";
+import DashboardHome from "../pages/dashboard/DashboardHome";
+import AddFood from "../pages/dashboard/AddFood";
+import EditFood from "../pages/dashboard/EditFood";
+import AllFood from "../pages/dashboard/AllFood";
 
 const router = createBrowserRouter([
     {
@@ -38,10 +41,13 @@ const router = createBrowserRouter([
             {
                 path: "register",
                 element: <Register />
-            }
+            },
+
 
         ]
+
     },
+
 
     {
         path: "/dashboard",
@@ -53,8 +59,20 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <DashboardHome />
-            }
+                element: <DashboardHome />,
+            },
+            {
+                path: "allFood",
+                element: <AllFood />,
+            },
+            {
+                path: "addFood",
+                element: <AddFood />,
+            },
+            {
+                path: "editFood/:id",
+                element: <EditFood />,
+            },
         ]
     }
 ]);

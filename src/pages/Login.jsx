@@ -1,19 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png"
 import LoginWithGoogle from "../components/auth/LoginWithGoogle";
 import LoginWithFacebook from "../components/auth/LoginWithFacebook";
 import LOginWithGithub from "../components/auth/LOginWithGithub";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useAuthState, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../firebase/firebase.config";
+import { useEffect } from "react";
 export default function Login() {
-    // const navigate = useNavigate();
-    // const [userinfo] = useAuthState(auth);
+    const [user, loading, error] = useAuthState(auth);
+    const navigate = useNavigate();
 
     const [
         signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
+
     ] = useSignInWithEmailAndPassword(auth);
 
 
@@ -25,9 +24,13 @@ export default function Login() {
         signInWithEmailAndPassword(email, password)
     };
 
+    let from = location.state?.from?.pathname || "/";
 
-
-
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [user, loading, navigate, from]);
     // useEffect(() => {
     //     if (userinfo[0]) {
     //         navigate("/");

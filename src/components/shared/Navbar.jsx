@@ -85,10 +85,16 @@ export default function Navbar() {
                                     <li>
                                         <a className="justify-between">
                                             {user?.displayName}
+
+                                            {/* <span className="badge">New</span> */}
+                                        </a>
+                                        <a className="justify-between text-xs">
+
+                                            {user?.email}
                                             {/* <span className="badge">New</span> */}
                                         </a>
                                     </li>
-                                    <Link onClick={async () => {
+                                    <Link className="mt-5 border border-white rounded-lg" onClick={async () => {
                                         const success = await signOut();
                                     }} to={"/"}><li><a>Logout</a></li></Link>
 
