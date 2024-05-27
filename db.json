@@ -5,7 +5,7 @@
             "title": "Spaghetti Carbonara 2",
             "price": 12.99,
             "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
-            "image": "https://example.com/images/spaghetti-carbonara.jpg",
+            "image": "https://i.ibb.co/m4CX3w0/pexels-polina-tankilevitch-4518844.jpg",
             "category": "Thai"
         },
         {
@@ -13,7 +13,7 @@
             "title": "Chicken Tikka Masala",
             "price": 15.99,
             "description": "Grilled chunks of chicken enveloped in a creamy, spiced tomato sauce.",
-            "image": "https://example.com/images/chicken-tikka-masala.jpg",
+            "image": "https://i.ibb.co/nkFjkZv/chicken-tikka-masala-for-the-grill-recipe-hero-2-1-cb493f49e30140efbffec162d5f2d1d7.jpg",
             "category": "Indian"
         },
         {
@@ -21,7 +21,7 @@
             "title": "Sushi Platter",
             "price": 24.99,
             "description": "A variety of fresh sushi including nigiri, sashimi, and rolls.",
-            "image": "https://example.com/images/sushi-platter.jpg",
+            "image": "https://i.ibb.co/2ns97Xn/pexels-pauline-raw-131148428-10488749.jpg",
             "category": "Japanese"
         },
         {
@@ -29,7 +29,7 @@
             "title": "Tacos al Pastor",
             "price": 10.99,
             "description": "Flavorful marinated pork served on small corn tortillas with pineapple and onions.",
-            "image": "https://example.com/images/tacos-al-pastor.jpg",
+            "image": "https://i.ibb.co/bJ7DwwH/French-Onion-Soup-square-FS.jpg",
             "category": "Mexican"
         },
         {
@@ -37,7 +37,7 @@
             "title": "Pad Thai",
             "price": 11.99,
             "description": "A stir-fried rice noodle dish with shrimp, tofu, peanuts, and tamarind sauce.",
-            "image": "https://example.com/images/pad-thai.jpg",
+            "image": "https://i.ibb.co/hHz9Ymc/pexels-capturedbyaugustine-12561883.jpg",
             "category": "Thai"
         },
         {
@@ -45,7 +45,7 @@
             "title": "Beef Wellington",
             "price": 29.99,
             "description": "Tender beef filet wrapped in puff pastry with duxelles and prosciutto.",
-            "image": "https://example.com/images/beef-wellington.jpg",
+            "image": "https://i.ibb.co/Qkk4kCG/pexels-nadin-sh-78971847-20095442.jpg",
             "category": "British"
         },
         {
@@ -53,7 +53,7 @@
             "title": "Falafel Wrap",
             "price": 8.99,
             "description": "Crispy falafel balls wrapped in a pita with hummus, tahini, and fresh vegetables.",
-            "image": "https://example.com/images/falafel-wrap.jpg",
+            "image": "https://i.ibb.co/jTk2B2F/Falafel-Wrap-SQ-1.jpg",
             "category": "Middle Eastern"
         },
         {
@@ -61,7 +61,7 @@
             "title": "French Onion Soup",
             "price": 7.99,
             "description": "A savory soup made with caramelized onions, beef broth, and topped with melted cheese.",
-            "image": "https://example.com/images/french-onion-soup.jpg",
+            "image": "https://i.ibb.co/bJ7DwwH/French-Onion-Soup-square-FS.jpg",
             "category": "French"
         },
         {
@@ -69,7 +69,7 @@
             "title": "Margherita Pizza",
             "price": 13.99,
             "description": "Classic pizza topped with fresh tomatoes, mozzarella cheese, and basil.",
-            "image": "https://example.com/images/margherita-pizza.jpg",
+            "image": "https://i.ibb.co/8DTnzN8/pexels-renestrgar-18431672.jpg",
             "category": "Italian"
         },
         {
@@ -77,7 +77,7 @@
             "title": "Vegetable Stir Fry",
             "price": 9.99,
             "description": "A mix of fresh vegetables stir-fried with soy sauce and served over rice.",
-            "image": "https://example.com/images/vegetable-stir-fry.jpg",
+            "image": "https://i.ibb.co/9HjZQDD/Vegetable-Stir-Fry-2.jpg",
             "category": "Chinese"
         },
         {
@@ -85,7 +85,7 @@
             "title": "Butter Chicken",
             "price": 16.99,
             "description": "Tender chicken cooked in a rich, creamy tomato gravy.",
-            "image": "https://example.com/images/butter-chicken.jpg",
+            "image": "https://i.ibb.co/nkFjkZv/chicken-tikka-masala-for-the-grill-recipe-hero-2-1-cb493f49e30140efbffec162d5f2d1d7.jpg",
             "category": "Indian"
         },
         {
@@ -93,7 +93,7 @@
             "title": "Rogan Josh",
             "price": 17.99,
             "description": "A flavorful lamb curry with a blend of spices and a tomato-based sauce.",
-            "image": "https://example.com/images/rogan-josh.jpg",
+            "image": "https://i.ibb.co/w7qd1B0/rogan-josh.jpg",
             "category": "Indian"
         },
         {
@@ -101,7 +101,7 @@
             "title": "Tempura",
             "price": 14.99,
             "description": "Lightly battered and deep-fried seafood and vegetables.",
-            "image": "https://example.com/images/tempura.jpg",
+            "image": "https://i.ibb.co/whkhMHg/basic-tempura-for-fish-and-seafood-1300531-hero-01-bbd91b4ee23940749fec5ab7693eadcc.jpg",
             "category": "Japanese"
         },
         {
@@ -109,7 +109,7 @@
             "title": "Ramen",
             "price": 12.99,
             "description": "A hearty Japanese noodle soup with meat, vegetables, and broth.",
-            "image": "https://example.com/images/ramen.jpg",
+            "image": "https://i.ibb.co/kXZHFtP/Homemade-Ramen-f.jpg",
             "category": "Japanese"
         },
         {

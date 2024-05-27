@@ -5,7 +5,7 @@ import Footer from "../components/shared/Footer";
 export default function MainLayout() {
     return (
 
-        <div className=" ">
+        <div className=" bg-color ">
             <Navbar />
             <Outlet />
             <Footer />
