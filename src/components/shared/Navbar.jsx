@@ -58,14 +58,14 @@ export default function Navbar() {
                     {!user?.email ?
                         <>
                             <div className="dropdown dropdown-end">
-                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                    <div className="">
-                                        <li>
-                                            <a className="justify-between">
-                                                Profile
+                                <div tabIndex={0} role="button" className="btn btn-ghost  avatar">
+                                    <div className="py-3">
 
-                                            </a>
-                                        </li>
+                                        <a className="justify-between">
+                                            Profile
+
+                                        </a>
+
                                     </div>
                                 </div>
                                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-color rounded-box w-52">
@@ -108,6 +108,6 @@ export default function Navbar() {
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
