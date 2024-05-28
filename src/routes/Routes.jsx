@@ -12,6 +12,8 @@ import DashboardHome from "../pages/dashboard/DashboardHome";
 import AddFood from "../pages/dashboard/AddFood";
 import EditFood from "../pages/dashboard/EditFood";
 import AllFood from "../pages/dashboard/AllFood";
+import FoodDetails from "../pages/dashboard/FoodDetails";
+
 
 const router = createBrowserRouter([
     {
@@ -72,6 +74,10 @@ const router = createBrowserRouter([
             {
                 path: "editFood/:id",
                 element: <EditFood />,
+            },
+            {
+                path: "foodDetails/:id",
+                element: <FoodDetails />,
             },
         ]
     }

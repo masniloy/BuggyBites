@@ -36,50 +36,56 @@ export default function AddFood() {
 
         await axios.post("http://localhost:3000/recipes", recipeData);
     };
+
+
+    function addProduct() {
+        alert("Want to delete?");
+    }
     return (
-        <div className="w-full px-16">
-            <h1 className="text-4xl mb-4">Add Recipe</h1>
-            <form onSubmit={handleCreateRecipe} className="w-full">
-                <div className="mb-4">
-                    <label htmlFor="">Id </label>
-                    <input type="text" name="id" className="w-full py-3 px-5 border" />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="">Title </label>
-                    <input type="text" name="title" className="w-full py-3 px-5 border" />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="">Price </label>
-                    <input
-                        type="number"
-                        name="price"
-                        className="w-full py-3 px-5 border"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="">Cateogry </label>
-                    <select name="category" id="" className="w-full py-3 px-5 border">
-                        {categories?.map((category) => (
-                            <option key={category?.id} value={category?.title}>
-                                {category?.title}
-                            </option>
-                        ))}
-                    </select>
-                </div>
+        <div className="  ">
 
-                <div className="mb-4">
-                    <label htmlFor="">Description </label>
-                    <textarea name="description" className="w-full py-3 px-5 border" />
-                </div>
+            <div className="sm:flex items-center justify-center min-h-screen bg-gray-100">
+                <div className="bg-white p-8 w-full rounded-lg shadow-lg sm:w-1/2 ">
+                    <h2 className="text-2xl font-semibold mb-2">Add new item</h2>
+                    <form onSubmit={handleCreateRecipe} >
 
-                <div className="mb-4">
-                    <input
-                        type="submit"
-                        value={"Add Recipe"}
-                        className="w-full btn py-3 px-5 border btn-neutral"
-                    />
+                        <div className="mb-4">
+                            <label className="block text-gray-700">Id *</label>
+                            <input required name="id" type="text" placeholder="Id for your product" className="input input-bordered w-full" />
+                        </div>
+                        <div className="mb-4">
+                            <label className="block text-gray-700">Title *</label>
+                            <input required name="title" type="text" placeholder="Title for your product" className="input input-bordered w-full" />
+                        </div>
+
+                        <div className="mb-4">
+                            <label htmlFor="">Cateogry * </label>
+                            <select required name="category" id="" className="input input-bordered w-full">
+                                {categories?.map((category) => (
+                                    <option key={category?.id} value={category?.title}>
+                                        {category?.title}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+
+                        <div className="mb-4">
+                            <label className="block text-gray-700">Description *</label>
+                            <textarea required name="description" placeholder="Describe your product" className="textarea textarea-bordered w-full"></textarea>
+                        </div>
+                        <div className="mb-4">
+                            <label className="block text-gray-700">Price *</label>
+                            <input required name="price" type="number" placeholder="Enter amount" className="input input-bordered w-full" />
+                        </div>
+                        <div className="flex justify-end">
+                            {/* <button type="button" className="btn btn-ghost mr-2">Cancel</button> */}
+                            <button onClick={addProduct} type="submit" className="btn bg-color text-white">Add Item</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
+
+
         </div>
     );
 }

@@ -46,59 +46,50 @@ export default function EditFood() {
         await axios.patch(`http://localhost:3000/recipes/${id}`, recipeData);
     };
     return (
-        <div className="w-full px-16">
-            <h1 className="text-4xl mb-4">Add Recipe</h1>
-            <form onSubmit={handleCreateRecipe} className="w-full">
-                <div className="mb-4">
-                    <label htmlFor="">Title </label>
-                    <input
-                        defaultValue={recipeDetails?.title}
-                        type="text"
-                        name="title"
-                        className="w-full py-3 px-5 border"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="">Price </label>
-                    <input
-                        type="number"
-                        name="price"
-                        defaultValue={recipeDetails?.price}
-                        className="w-full py-3 px-5 border"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="">Cateogry </label>
-                    <select name="category" id="" className="w-full py-3 px-5 border">
-                        {categories?.map((category) => (
-                            <option
-                                key={category?.title}
-                                selected={category?.title === recipeDetails?.category}
-                                value={category?.title}
-                            >
-                                {category?.title}
-                            </option>
-                        ))}
-                    </select>
-                </div>
 
-                <div className="mb-4">
-                    <label htmlFor="">Description </label>
-                    <textarea
-                        defaultValue={recipeDetails?.description}
-                        name="description"
-                        className="w-full py-3 px-5 border"
-                    />
-                </div>
 
-                <div className="mb-4">
-                    <input
-                        type="submit"
-                        value={"Add Recipe"}
-                        className="w-full btn py-3 px-5 border btn-neutral"
-                    />
-                </div>
-            </form>
+        <div className="sm:flex items-center justify-center min-h-screen bg-gray-100">
+            <div className="bg-white p-8 w-full rounded-lg shadow-lg sm:w-1/2 ">
+                <h2 className="text-2xl font-semibold mb-2">Edit Item</h2>
+                <form onSubmit={handleCreateRecipe} >
+
+
+                    <div className="mb-4">
+                        <label className="block text-gray-700">Title *</label>
+                        <input name="title" type="text" defaultValue={recipeDetails?.title} className="input input-bordered w-full" />
+                    </div>
+
+                    <div className="mb-4">
+                        <label htmlFor="">Cateogry * </label>
+                        <select name="category" id="" className="input input-bordered w-full">
+                            {categories?.map((category) => (
+                                <option key={category?.id}
+                                    selected={category?.title === recipeDetails?.category}
+                                    value={category?.title}>
+                                    {category?.title}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+
+                    <div className="mb-4">
+                        <label className="block text-gray-700">Description *</label>
+                        <textarea name="description" defaultValue={recipeDetails?.description} className="textarea textarea-bordered w-full"></textarea>
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-700">Price *</label>
+                        <input name="price" type="number" defaultValue={recipeDetails?.price} className="input input-bordered w-full" />
+                    </div>
+                    <div className="flex justify-end">
+                        {/* <button type="button" className="btn btn-ghost mr-2">Cancel</button> */}
+                        <button type="submit" className="btn bg-color text-white">Update Item</button>
+                    </div>
+                </form>
+            </div>
         </div>
+
+
+
+
     );
 }

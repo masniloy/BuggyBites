@@ -1,10 +1,6 @@
 /* eslint-disable react/prop-types */
-
-
-export default function RecepiCard({ recipe }) {
-
+export default function MenuCart({ recipe }) {
     return (
-
         <div className="my-5">
             <div className="card w-96 bg-base-100 shadow-lg shadow-color1 image-full">
                 <figure className="w-full h-60 object-cover"><img className="w-full h-full object-cover" src={recipe.image} alt="Food" /></figure>
@@ -25,5 +21,5 @@ export default function RecepiCard({ recipe }) {
 
 
         </div>
-    );
+    )
 }

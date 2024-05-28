@@ -15,7 +15,7 @@ export default function AllFood() {
     }, []);
     return (
         <div className="overflow-x-auto w-full px-16 mt-10">
-            <h1 className="text-3xl mb-4">Mange All Food</h1>
+            <h1 className="text-2xl mb-4">Mange All Food</h1>
             <table className="table table-zebra">
                 {/* head */}
                 <thead>
@@ -25,6 +25,7 @@ export default function AllFood() {
                         <th>Title</th>
                         <th>Price</th>
                         <th>Category</th>
+                        <th>Detail</th>
                         <th>Action</th>
                         <th>Delete</th>
                     </tr>

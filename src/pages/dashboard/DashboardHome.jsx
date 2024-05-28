@@ -16,8 +16,9 @@ export default function DashboardHome() {
                     </div>
                     <div className="text-center mt-4">
                         <h2 className="text-2xl font-semibold">{user?.displayName}</h2>
-                        <p className="text-gray-500">{user?.email}</p>
-                        <p className="mt-2 text-sm">Mirpur, Kushtia, Bangladesh</p>
+                        <p className="text-gray-500 text-sm">{user?.email}</p>
+
+                        <p className="mt-2 text-sm">Street number & name, Apartment, City, zip code,<br /> Country Name</p>
 
                     </div>
                     <div className="mt-4 flex justify-around text-center">

@@ -2,8 +2,8 @@
   "recipes": [
     {
       "id": "1",
-      "title": "Spaghetti Carbonara 2",
-      "price": 12.99,
+      "title": "Spaghetti Carbonara",
+      "price": "12.99",
       "description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.",
       "image": "https://i.ibb.co/m4CX3w0/pexels-polina-tankilevitch-4518844.jpg",
       "category": "Thai"
@@ -11,7 +11,7 @@
     {
       "id": "2",
       "title": "Chicken Tikka Masala",
-      "price": 15.99,
+      "price": 10.99,
       "description": "Grilled chunks of chicken enveloped in a creamy, spiced tomato sauce.",
       "image": "https://i.ibb.co/nkFjkZv/chicken-tikka-masala-for-the-grill-recipe-hero-2-1-cb493f49e30140efbffec162d5f2d1d7.jpg",
       "category": "Indian"
@@ -54,7 +54,7 @@
       "price": 8.99,
       "description": "Crispy falafel balls wrapped in a pita with hummus, tahini, and fresh vegetables.",
       "image": "https://i.ibb.co/jTk2B2F/Falafel-Wrap-SQ-1.jpg",
-      "category": "Middle Eastern"
+      "category": "Eastern"
     },
     {
       "id": "8",
@@ -107,10 +107,38 @@
     {
       "id": "14",
       "title": "Ramen",
-      "price": "10.99",
+      "price": 10.99,
       "description": "A hearty Japanese noodle soup with meat, vegetables, and broth.",
       "image": "https://i.ibb.co/kXZHFtP/Homemade-Ramen-f.jpg",
       "category": "Japanese"
+    },
+    {
+      "id": "15",
+      "title": "lakdjlkadj",
+      "price": 10,
+      "category": "Indian",
+      "description": "afdasfsgsdgasgasdf"
+    },
+    {
+      "id": "16",
+      "title": "wqetrwerqwr",
+      "price": 11,
+      "category": "Mexican",
+      "description": "sadfafdsfd"
+    },
+    {
+      "id": "",
+      "title": "",
+      "price": "",
+      "category": "Italian",
+      "description": ""
+    },
+    {
+      "id": "17",
+      "title": "dsadasdasd",
+      "price": "21",
+      "category": "Mexican",
+      "description": "adasdsadsad"
     }
   ],
   "categories": [
@@ -139,7 +167,7 @@
       "id": "b069"
     },
     {
-      "title": "Middle Eastern",
+      "title": "Eastern",
       "id": "b460"
     },
     {

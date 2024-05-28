@@ -8,16 +8,14 @@ export default function Home() {
     const [recipes, setRescipes] = useState();
     const [categoris, setCategories] = useState();
     useEffect(() => {
-        // fetch("http://localhost:3000/recipes")
-        //   .then((res) => res.json())
-        //   .then((data) => setRescipes(data));
+
 
         async function load() {
-            //get recipies
+
             const recipeRes = await fetch("http://localhost:3000/recipes");
             const recipeData = await recipeRes.json();
             setRescipes(recipeData);
-            //get categories
+
 
             const categoryRes = await fetch("http://localhost:3000/categories");
             const categoryData = await categoryRes.json();
@@ -26,33 +24,44 @@ export default function Home() {
         }
         load();
 
-        // fetch("http://localhost:3000/categories")
-        //   .then((res) => res.json())
-        //   .then((data) => setCategories(data));
     }, []);
 
-    console.log("hi");
+
     return (
         <div>
             <Banner />
 
-            <div className="mx-16">
-                <h1 className="text-4xl my-20 text-center">Our Recipe Categories </h1>
-                <div className="grid grid-cols-4 gap-6">
-                    {categoris?.map((category) => (
-                        <CategoryCard key={category?.id} category={category} />
-                    ))}
-                </div>
-            </div>
-            <div className="mx-16">
-                <h1 className="text-4xl my-20 text-center">Our Newest Recipes </h1>
-                <div className="grid grid-cols-4 gap-6">
-                    {recipes
-                        ?.reverse()
-                        ?.slice(0, 4)
-                        ?.map((recipe) => (
-                            <RecepiCard key={recipe?.id} recipe={recipe} />
+            <div className=" flex bg-white text-black mt-32 uppercase group">
+
+                <div className="flex animate-loop-scroll  my-10 group-hover:paused ">
+
+                    <div className=" flex ">
+                        {categoris?.map((category) => (
+                            <CategoryCard key={category?.id} category={category} />
                         ))}
+                    </div>
+
+                </div>
+                <div className="flex animate-loop-scroll my-10 group-hover:paused">
+                    <div className=" flex ">
+                        {categoris?.map((category) => (
+                            <CategoryCard key={category?.id} category={category} />
+                        ))}
+                    </div>
+                </div>
+
+            </div>
+            <div className="">
+                <h1 className="text-4xl my-20 text-center">Our Newest Recipes </h1>
+                <div className="item-cente flex justify-center">
+                    <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-12">
+                        {recipes
+                            ?.reverse()
+                            ?.slice(0, 4)
+                            ?.map((recipe) => (
+                                <RecepiCard key={recipe?.id} recipe={recipe} />
+                            ))}
+                    </div>
                 </div>
             </div>
         </div>
