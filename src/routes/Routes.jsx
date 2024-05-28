@@ -13,6 +13,7 @@ import AddFood from "../pages/dashboard/AddFood";
 import EditFood from "../pages/dashboard/EditFood";
 import AllFood from "../pages/dashboard/AllFood";
 import FoodDetails from "../pages/dashboard/FoodDetails";
+import ManiFoodDetails from "../pages/ManiFoodDetails";
 
 
 const router = createBrowserRouter([
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "menus",
                 element: <Menus />
+            },
+            {
+                path: "mainFoodDetails/:id",
+                element: <ManiFoodDetails />
             },
             {
                 path: "login",

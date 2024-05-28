@@ -7,7 +7,7 @@ export default function AddFood() {
     const [showModal, setShowModal] = useState(false);
     const [showToast, setShowToast] = useState(false);
     const [formData, setFormData] = useState({});
-    const [formResetKey, setFormResetKey] = useState(Date.now());  // To reset the form
+    const [formResetKey, setFormResetKey] = useState(Date.now());
 
     useEffect(() => {
         async function load() {
@@ -25,7 +25,7 @@ export default function AddFood() {
         setTimeout(() => {
             setShowToast(false);
         }, 3000);
-        setFormResetKey(Date.now());  // Reset the form
+        setFormResetKey(Date.now());
     };
 
     const handleAddProductClick = (e) => {

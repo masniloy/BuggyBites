@@ -17,9 +17,10 @@ export default function Navbar() {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 bg-color">
 
-                            <Link to={"about"}><li><a>Home</a></li></Link>
-                            <Link to={"/"}><li><a>About</a></li></Link>
+                            <Link to={"/"}><li><a>Home</a></li></Link>
                             <Link to={"menus"}><li><a>Menus</a></li></Link>
+                            <Link to={"about"}><li><a>About</a></li></Link>
+
                             <Link to={"contact"}><li><a>Contact</a></li></Link>
 
 
@@ -39,8 +40,9 @@ export default function Navbar() {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <Link to={"/"}><li><a>Home</a></li></Link>
-                        <Link to={"about"}><li><a>About</a></li></Link>
                         <Link to={"menus"}><li><a>Menus</a></li></Link>
+                        <Link to={"about"}><li><a>About</a></li></Link>
+
                         <Link to={"contact"}><li><a>Contact</a></li></Link>
                         {!user?.email ?
                             <>

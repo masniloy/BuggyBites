@@ -2,8 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export default function FoodDetails() {
-
+export default function ManiFoodDetails() {
     const { id } = useParams();
 
     const [recipeDetails, setRecipeDetails] = useState();
@@ -22,7 +21,7 @@ export default function FoodDetails() {
     }, [id]);
 
     return (
-        <div className=" ">
+        <div className=" text-white ">
             <div className="container mx-auto p-6">
                 <div className="flex flex-col md:flex-row gap-8">
                     <div className="md:w-1/2">
@@ -45,25 +44,21 @@ export default function FoodDetails() {
                         </div>
                         <p className="mb-4">{recipeDetails?.description}</p>
                         <div className="flex items-center mb-4">
-                            <input type="number" min="1" defaultValue="1" className="input input-bordered w-20" />
+                            <input type="number" min="1" defaultValue="1" className="input input-bordered w-20 border-white bg-color" />
                             <button className="btn bg-color text-white hover:bg-gray-500 ml-4">Add To Cart</button>
                         </div>
-                        <div className="flex gap-4 mb-4">
-                            <button className="btn btn-outline">Add to wishlist</button>
+                        <div className="flex gap-4 mb-4 ">
+                            <button className="btn btn-outline text-gray-500">Add to wishlist</button>
                             {/* <button className="btn btn-outline">Compare</button> */}
                         </div>
-                        <div className="text-gray-700 mb-2"><strong>Type:</strong> {recipeDetails?.category} Dishe </div>
-                        <div className="text-gray-700 mb-2"><strong>SKU:</strong> FWBHBHT</div>
-                        <div className="text-gray-700 mb-2"><strong>Tags:</strong> Organic, Brown, Vegetables</div>
-                        <div className="text-gray-700"><strong>Stock:</strong> 5 Items In Stock</div>
+                        <div className=" mb-2"><strong>Type:</strong> {recipeDetails?.category} Dishe </div>
+                        <div className=" mb-2"><strong>SKU:</strong> FWBHBHT</div>
+                        <div className=" mb-2"><strong>Tags:</strong> Organic, Brown, Vegetables</div>
+                        <div className="text-red-600"><strong>Stock:</strong> 5 Items In Stock</div>
                     </div>
                 </div>
-                <div className="mt-8 border-b border-color" >
-                    <div className="tabs ">
-                        <a className="tab tab-bordered tab-active">Description</a>
-                        <a className="tab tab-bordered">Specification</a>
-                        <a className="tab tab-bordered">Review</a>
-                    </div>
+                <div className="mt-8 border-b " >
+
                 </div>
 
             </div>

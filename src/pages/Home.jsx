@@ -3,6 +3,7 @@ import Banner from "../components/home/Banner";
 import { useState } from "react";
 import RecepiCard from "../components/cards/RecepiCard";
 import CategoryCard from "../components/cards/CategoryCard";
+import Contact from "./Contact";
 
 export default function Home() {
     const [recipes, setRescipes] = useState();
@@ -28,10 +29,10 @@ export default function Home() {
 
 
     return (
-        <div>
+        <div className="">
             <Banner />
 
-            <div className=" flex bg-white text-black mt-32 uppercase group">
+            <div className=" flex bg-white text-black my-32 uppercase group">
 
                 <div className="flex animate-loop-scroll  my-10 group-hover:paused ">
 
@@ -51,9 +52,12 @@ export default function Home() {
                 </div>
 
             </div>
-            <div className="">
-                <h1 className="text-4xl my-20 text-center">Our Newest Recipes </h1>
+            <div className=" mb-20">
+                <h1 className="sm:text-3xl text-2xl my-20 text-center text-white ">______ Most Popular Foods ______
+                </h1>
+
                 <div className="item-cente flex justify-center">
+
                     <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-12">
                         {recipes
                             ?.reverse()
@@ -62,8 +66,12 @@ export default function Home() {
                                 <RecepiCard key={recipe?.id} recipe={recipe} />
                             ))}
                     </div>
+
                 </div>
+
             </div>
+
+            <Contact />
         </div>
     );
 }
