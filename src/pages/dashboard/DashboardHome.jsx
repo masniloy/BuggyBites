@@ -1,12 +1,32 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../firebase/firebase.config";
+import { useEffect, useState } from "react";
+import CategoryCard from "../../components/cards/CategoryCard";
+
 
 export default function DashboardHome() {
     const [user] = useAuthState(auth);
+
+
+    const [categoris, setCategories] = useState();
+    useEffect(() => {
+
+
+        async function load() {
+
+
+            const categoryRes = await fetch("http://localhost:3000/categories");
+            const categoryData = await categoryRes.json();
+
+            setCategories(categoryData);
+        }
+        load();
+
+    }, []);
     return (
         <div className=" ">
-            <div className="flex items-center justify-center min-h-screen  ">
-                <div className="p-10 w-full h-screen  ">
+            <div className="flex items-center justify-center  ">
+                <div className="p-10 w-full   ">
                     <div className="flex justify-center">
                         <img
                             className="w-32 h-32 rounded-full border-2 border-color"
@@ -37,6 +57,30 @@ export default function DashboardHome() {
                     </div>
 
                 </div>
+
+
+            </div>
+
+
+            <div className=" flex bg-white text-black  uppercase group overflow-hidden">
+
+                <div className="flex animate-loop-scroll  my-5 group-hover:paused ">
+
+                    <div className=" flex ">
+                        {categoris?.map((category) => (
+                            <CategoryCard key={category?.id} category={category} />
+                        ))}
+                    </div>
+
+                </div>
+                <div className="flex animate-loop-scroll my-5 group-hover:paused">
+                    <div className=" flex ">
+                        {categoris?.map((category) => (
+                            <CategoryCard key={category?.id} category={category} />
+                        ))}
+                    </div>
+                </div>
+
             </div>
         </div>
     )

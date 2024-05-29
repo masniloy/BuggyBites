@@ -9,7 +9,7 @@ export default function Navbar() {
     return (
         <div className="">
 
-            <div className="navbar bg-color text-white">
+            <div className="navbar bg-color text-white border-b-4  border-color1">
                 <div className="navbar-start">
                     <div className="dropdown ">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
