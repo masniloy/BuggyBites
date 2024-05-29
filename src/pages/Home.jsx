@@ -32,7 +32,7 @@ export default function Home() {
         <div className="">
             <Banner />
 
-            <div className=" flex bg-white text-black my-32 uppercase group">
+            <div className=" flex bg-white text-black my-32 uppercase group overflow-hidden">
 
                 <div className="flex animate-loop-scroll  my-10 group-hover:paused ">
 

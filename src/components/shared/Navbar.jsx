@@ -35,7 +35,7 @@ export default function Navbar() {
 
                         </ul>
                     </div>
-                    <Link to={"/"}><a className="btn btn-ghost text-xl w-40">Buggy Bites</a></Link>
+                    <Link to={"/"}><a className="btn  bg-transparent text-xl sm:w-40 hover:bg-transparent text-white border-none">Buggy Bites</a></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -80,7 +80,7 @@ export default function Navbar() {
                             <div className="dropdown dropdown-end">
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
-                                        <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                                        <img alt="Tailwind CSS Navbar component" src={user?.photoURL} />
                                     </div>
                                 </div>
                                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-color rounded-box w-52">
